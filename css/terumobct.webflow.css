@@ -635,9 +635,11 @@
 }
 
 .section.half-grey-bg.quote {
+  position: relative;
+  overflow: visible;
   margin-top: 32px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(75%, #bb2e5a), color-stop(0, #fff));
-  background-image: linear-gradient(90deg, #bb2e5a 75%, #fff 0);
+  background-color: #c61e56;
+  background-image: none;
 }
 
 .section.half-grey-bg.quote.hidden {
@@ -5320,7 +5322,7 @@
   top: 6px;
   right: auto;
   bottom: auto;
-  z-index: 4;
+  z-index: 5;
   width: 100%;
   -webkit-transform: translate(0px, -100%);
   -ms-transform: translate(0px, -100%);
