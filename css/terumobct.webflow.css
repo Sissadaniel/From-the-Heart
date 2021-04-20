@@ -2303,10 +2303,7 @@
 }
 
 .stats-row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 16px;
@@ -5294,10 +5291,7 @@
 }
 
 .div-block-100 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
