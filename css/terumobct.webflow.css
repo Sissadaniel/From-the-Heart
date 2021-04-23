@@ -265,6 +265,9 @@
 }
 
 .button.left-aligned.dark-bg {
+  max-width: 230px;
+  padding-right: 16px;
+  padding-left: 16px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1186,6 +1189,7 @@
 
 .heading-2.centre._800-width.white {
   color: #fff;
+  text-align: left;
 }
 
 .heading-2.white {
@@ -5045,10 +5049,7 @@
 
 .termo {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-bottom: 16px;
   padding: 32px;
   -webkit-box-pack: center;
@@ -5066,9 +5067,9 @@
 
 .div-block-88 {
   position: absolute;
-  left: 44%;
+  left: auto;
   top: 50%;
-  right: auto;
+  right: 0%;
   bottom: 0%;
   width: 18px;
   height: 18px;
@@ -5404,6 +5405,40 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.div-block-106 {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #c61e56;
+}
+
+.ssc-square.spooky-liters {
+  height: 120px;
+}
+
+.ssc-square.spooky-liters.spooky-country {
+  height: 100px;
+  margin-top: 20px;
+}
+
+.ssc-square.spooky-liters.spooky-country.bottom {
+  margin-bottom: 20px;
+}
+
+.ssc-square.spooky-liters.spooky-leader {
+  height: 210px;
+  margin-bottom: 45px;
+}
+
+.ssc-square.spooky-liters.spooky-leader.bottom {
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -7007,7 +7042,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: rgba(2, 103, 107, 0.1);
-    color: #603eff;
+    color: #c61e56;
   }
 
   .menu-button-green.w--open {
@@ -7167,6 +7202,7 @@
     -webkit-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
+    color: #fff;
   }
 
   .section {
@@ -7605,7 +7641,6 @@
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
-    color: #333;
   }
 
   .columns-standard {
@@ -7895,6 +7930,12 @@
   .lp-image-1 {
     max-width: 100%;
     margin-right: 40px;
+  }
+
+  .lp-image-1.shadow {
+    -webkit-transform: scale(0.8) translate(0px, 40px);
+    -ms-transform: scale(0.8) translate(0px, 40px);
+    transform: scale(0.8) translate(0px, 40px);
   }
 
   .lp-image-2 {
@@ -8210,6 +8251,10 @@
     align-self: center;
   }
 
+  .nav-menu-dropdown {
+    background-color: #ce3f6c;
+  }
+
   .button.no-max-width {
     margin-right: auto;
     margin-left: auto;
@@ -8218,6 +8263,11 @@
   .button.left-aligned {
     margin-bottom: 5px;
     font-size: 15px;
+  }
+
+  .button.left-aligned.dark-bg {
+    padding-right: 8px;
+    padding-left: 8px;
   }
 
   .button.text-only {
@@ -8252,7 +8302,7 @@
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    background-color: #fff;
+    background-color: transparent;
     text-align: center;
   }
 
@@ -9246,7 +9296,7 @@
   }
 
   .check-wrap {
-    margin-bottom: 0px;
+    margin-bottom: 8px;
   }
 
   .price-grid {
@@ -9452,6 +9502,10 @@
     margin: auto auto -24px;
   }
 
+  .landing-page-2-hero-image.shadow {
+    display: none;
+  }
+
   .lp2-hero-column-1 {
     z-index: 1;
     height: auto;
@@ -9470,6 +9524,10 @@
   .delete-this---callout {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .lottie-animation {
+    right: 32px;
   }
 
   .paragraph-7 {
@@ -9507,6 +9565,10 @@
 }
 
 @media screen and (max-width: 479px) {
+  .nav-menu-dropdown {
+    z-index: 3;
+  }
+
   .button {
     width: 100%;
     height: 40px;
@@ -9553,6 +9615,7 @@
   }
 
   .button.text-only.centre-mobile {
+    margin-left: 0px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -9578,7 +9641,6 @@
     margin-left: auto;
     float: none;
     clear: none;
-    background-color: #fff;
     text-align: center;
   }
 
@@ -9587,6 +9649,10 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .navbar {
+    z-index: 5;
   }
 
   .section.home-hero {
@@ -10801,6 +10867,10 @@
   .delete-this---callout {
     padding-right: 4%;
     padding-left: 4%;
+  }
+
+  .lottie-animation {
+    right: 16px;
   }
 
   .html-embed.down {
