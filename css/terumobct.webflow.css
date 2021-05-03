@@ -206,9 +206,10 @@
 }
 
 .button.no-max-width {
-  display: none;
-  width: 100%;
-  max-width: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 0px;
   margin-left: 4px;
   -webkit-box-align: center;
@@ -217,7 +218,6 @@
   align-items: center;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -5034,7 +5034,7 @@
   position: absolute;
   left: auto;
   top: auto;
-  right: 128px;
+  right: 25%;
   bottom: 32px;
   width: 64px;
 }
@@ -5243,11 +5243,11 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 8px;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5439,6 +5439,10 @@
 
 .ssc-square.spooky-liters.spooky-leader.bottom {
   margin-bottom: 50px;
+}
+
+.text-block-3 {
+  font-weight: 900;
 }
 
 @media screen and (min-width: 1440px) {
@@ -7101,9 +7105,7 @@
   }
 
   .button.no-max-width {
-    max-width: 250px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 170px;
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
@@ -9576,6 +9578,11 @@
     margin-bottom: 10px;
     color: #fff;
     font-size: 14px;
+  }
+
+  .button.no-max-width {
+    width: auto;
+    margin-bottom: 0px;
   }
 
   .button.left-aligned {

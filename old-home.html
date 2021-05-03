@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Apr 23 2021 15:44:00 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Mon May 03 2021 21:09:29 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="606df5cb11788f9cdabacd58" data-wf-site="606df5cb11788f7aeebacd52">
 <head>
   <meta charset="utf-8">
@@ -29,15 +29,15 @@
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
     <div class="navigation-wrapper">
-      <a href="#" class="brand w-nav-brand"><img src="images/Artboard-–-1.png" sizes="(max-width: 479px) 46vw, 100px" srcset="images/Artboard-–-1-p-500.png 500w, images/Artboard-–-1.png 562w" alt="" class="logo"></a>
+      <a href="index.html" class="brand w-nav-brand"><img src="images/Artboard-–-1.png" sizes="(max-width: 479px) 46vw, 100px" srcset="images/Artboard-–-1-p-500.png 500w, images/Artboard-–-1.png 562w" alt="" class="logo"></a>
       <nav role="navigation" class="nav-menu-dropdown w-clearfix w-nav-menu">
         <a href="#" class="nav-link w-nav-link">Inicio</a>
         <a href="#" class="nav-link w-nav-link">¿Cómo participar?</a>
         <a href="#" class="nav-link w-nav-link">Donaciómetro</a>
         <a href="#" class="nav-link w-nav-link">Puntos por país</a>
         <a href="#" class="nav-link w-nav-link">Tabla de puntaje</a>
-        <a href="https://webflow.com/website/connect-startup-template-cloneable?rfsn=2028432.cbfcb1&amp;utm_medium=connect-template" target="_blank" class="button no-max-width w-button">Go to profile</a>
       </nav>
+      <a href="https://account.fromtheheart.lat/" target="_blank" class="button no-max-width w-button">Go to profile</a>
       <div class="menu-button-green w-nav-button">
         <div class="hamburger-icon w-icon-nav-menu"></div>
       </div>
@@ -341,7 +341,7 @@ const addTodo = async () => {
     const title = newgroup.querySelector('[data-title="title"]');
     const liters = newgroup.querySelector('[data-liters="liters"]');
     title.innerText = group.group;
-    liters.innerText = group.liters;
+    liters.innerText = group.liters.toFixed(1);
     groupsParent.appendChild(newgroup);
     for (const skeleton of groupsSkeletons) {
       skeleton.style.display = "none";
@@ -351,7 +351,7 @@ const addTodo = async () => {
   const groupLatam = document.querySelector('[data-group="group_latam"]');
   const titleLatam = document.querySelector('[data-title="title_latam"]');
   const litersLatam = document.querySelector('[data-liters="liters_latam"]');
-  litersLatam.innerText = json.litersLATAM;
+  litersLatam.innerText = json.litersLATAM.toFixed(1);
   const result=json.litersLATAM*100/675;
   document.getElementById('latam_percentage').style.width = `${result}%`;
   const leaderboardProto = document.querySelector('[data-leaderboard="leader_proto"]');
@@ -369,9 +369,9 @@ const addTodo = async () => {
     const leaderLiters = newgroup.querySelector('[data-leaderboard="leader_liters"]');
     const secondLiters = newgroup.querySelector('[data-leaderboard="second_liters"]');
     const thirdLiters = newgroup.querySelector('[data-leaderboard="third_liters"]');
-    if (leaderboard.leaders[0]) leaderLiters.innerText = leaderboard.leaders[0].liters;
-    if (leaderboard.leaders[1]) secondLiters.innerText = leaderboard.leaders[1].liters;
-    if (leaderboard.leaders[2]) thirdLiters.innerText = leaderboard.leaders[2].liters;
+    if (leaderboard.leaders[0]) leaderLiters.innerText = leaderboard.leaders[0].liters.toFixed(1);
+    if (leaderboard.leaders[1]) secondLiters.innerText = leaderboard.leaders[1].liters.toFixed(1);
+    if (leaderboard.leaders[2]) thirdLiters.innerText = leaderboard.leaders[2].liters.toFixed(1);
     leaderboardsParent.appendChild(newgroup);
     newgroup.style.display = "flex";
   });
