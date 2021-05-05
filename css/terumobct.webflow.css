@@ -642,7 +642,8 @@
   overflow: visible;
   margin-top: 32px;
   background-color: #c61e56;
-  background-image: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c61e56), color-stop(50%, #c61e56), color-stop(0, #fff));
+  background-image: linear-gradient(180deg, #c61e56, #c61e56 50%, #fff 0);
 }
 
 .section.half-grey-bg.quote.hidden {
@@ -713,8 +714,19 @@
 }
 
 .wrapper.puntaje {
+  position: relative;
+  z-index: 6;
+  display: -ms-grid;
+  display: grid;
   max-width: 580px;
   padding: 8px 16px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
   border-radius: 17px;
   background-color: #fff;
   box-shadow: 1px 16px 20px 0 rgba(0, 0, 0, 0.09);
@@ -5334,6 +5346,13 @@
   transform: translate(0px, 100%);
 }
 
+.html-embed.down.fifty {
+  bottom: 50%;
+  -webkit-transform: translate(0px, 97%);
+  -ms-transform: translate(0px, 97%);
+  transform: translate(0px, 97%);
+}
+
 .image-96 {
   margin-top: 15px;
   -webkit-filter: grayscale(100%) brightness(1110%);
@@ -5379,10 +5398,7 @@
 }
 
 .div-block-104 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 100%;
   border-bottom: 1px solid #c61e56;
 }
@@ -5439,6 +5455,10 @@
 
 .ssc-square.spooky-liters.spooky-leader.bottom {
   margin-bottom: 50px;
+}
+
+.ssc-square.spooky-liters.spooky-awards {
+  height: 32px;
 }
 
 .text-block-3 {
@@ -8857,6 +8877,7 @@
   }
 
   .statistic {
+    width: auto;
     font-size: 35px;
   }
 
@@ -9532,8 +9553,20 @@
     right: 32px;
   }
 
+  .div-block-86 {
+    width: 100%;
+  }
+
+  .termo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .paragraph-7 {
-    margin-left: 8px;
+    margin-left: 0px;
   }
 
   .lottie-animation-3 {
@@ -9542,6 +9575,23 @@
     right: -64px;
     bottom: auto;
     width: 130px;
+  }
+
+  .div-block-92 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .div-block-93 {
+    width: 100%;
+    margin-bottom: 16px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .div-block-94 {

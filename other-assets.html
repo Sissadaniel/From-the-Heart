@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Mon May 03 2021 21:09:29 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Wed May 05 2021 16:36:15 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="606df5cb11788fb053bacd5d" data-wf-site="606df5cb11788f7aeebacd52">
 <head>
   <meta charset="utf-8">
@@ -81,6 +81,20 @@ const addTodo = async () => {
   document.getElementById('latam_percentage').style.width = `${result}%`;
   const leaderboardProto = document.querySelector('[data-leaderboard="leader_proto"]');
   const leaderboardsParent = document.getElementById('leaderboards-parent');
+  const awardRow = document.querySelector('[data-table="award_row"]');
+  const awardParent = document.querySelector('[data-table="award_parent"]');
+  json.awards.map(award => {
+    const newgroup = awardRow.cloneNode(true);
+    const awardName = newgroup.querySelector('[data-table="award_name"]');
+    const awardPoints = newgroup.querySelector('[data-table="award_points"]');
+    awardName.innerText = award.name;
+    awardPoints.innerText = numberWithCommas(award.points);
+    awardParent.appendChild(newgroup);
+    newgroup.style.display = "flex";  
+  })
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
   json.leaderboards.map(leaderboard => {
     const newgroup = leaderboardProto.cloneNode(true);
     const leaderCountry = newgroup.querySelector('[data-leaderboard="leader_country"]');
@@ -98,7 +112,7 @@ const addTodo = async () => {
     if (leaderboard.leaders[1]) secondLiters.innerText = leaderboard.leaders[1].liters.toFixed(1);
     if (leaderboard.leaders[2]) thirdLiters.innerText = leaderboard.leaders[2].liters.toFixed(1);
     leaderboardsParent.appendChild(newgroup);
-    newgroup.style.display = "flex";
+    newgroup.style.display = "flex";    
   });
 };
 addTodo();
